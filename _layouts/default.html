@@ -10,6 +10,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
   <body id="body">
+    {% if site.navigation %}
+      {% assign pages = site.navigation %}
+    {% else %}
+      {% assign pages = site.pages %}
+    {% endif %}
+    <header>
+      <div class="pad-terminal">
+        <div class="scrollable">
+          <div id="terminal">
+            <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
+            {% include menu-navbar.html menu=pages %}
+          </div>
+        </div>
+      </div>
+    </header>  
     <div class="pad-terminal">
       <div class="scrollable">
         <div id="terminal">
@@ -26,6 +41,7 @@
         </div>
       </div>
     </div>
+    {{ content }}
     <script type="module" src="assets/js/main.js" hidden></script>
   </body>
 </html>

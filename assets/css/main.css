@@ -68,6 +68,24 @@ body {
   text-decoration: underline;
 }
 
+.pad-terminal .nav {
+  padding-top: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  height: 50vh;
+}
+
+#terminal .nav {
+  min-height: 10%;
+  /* line-height: 0.5rem; */
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: rgba(27, 31, 38, 0.6); /* TERMINAL COLOR IMPORTANT THING */
+  border: 1px hidden var(--fg);
+  border-radius: 15px;
+  text-align: left;
+}
+
 .pad-terminal {
   padding-top: 2vh;
   padding-left: 2vh;
