@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Hack";
+  src: local("Hack Regular"), url("ttf/Hack-Regular.ttf");
+}
+
+:root {
+  --bg: #2e3440;
+  --fg: #d8dee9;
+  --black: #15161e;
+  --red: #bf616a;
+  --green: #a3be8c;
+  --yellow: #ebcb8b;
+  --blue: #5e81ac;
+  --purple: #b48ead;
+  --cyan: #88c0d0;
+  --light-gray: #4c566a;
+  --gray: #434c5e;
+}
+
+html {
+  font-family: "Hack", monospace;
+  text-align: center;
+  color: var(--fg);
+  background-color: var(--light-gray);
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.status-bar {
+  font-size: x-small;
+  height: 3vh;
+  padding: 0;
+  margin-bottom: 1vh;
+}
+
+.shortcuts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-gap: 2vh;
+}
+
+.shortcuts {
+  width: fit-content;
+  margin: 0 0;
+  padding: 0;
+}
+
+/* .shortcuts:first-child {
+  font-weight: 900;
+} */
+
+.shortcut {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.shortcut:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.pad-terminal {
+  padding-top: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  height: 96vh;
+}
+
+.scrollable {
+  height: 96vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#terminal {
+  min-height: 100%;
+  /* line-height: 0.5rem; */
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: rgba(27, 31, 38, 0.6); /* TERMINAL COLOR IMPORTANT THING */
+  border: 1px hidden var(--fg);
+  border-radius: 15px;
+  text-align: left;
+}
+
+#terminal p {
+  margin: 2px;
+}
+
+.prompt {
+  display: flex;
+}
+
+.green {
+  color: var(--green);
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.red {
+  color: var(--red);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.light-gray {
+  color: var(--light-gray);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.black {
+  color: var(--black);
+}
+
+#input {
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  font: inherit;
+  border: none;
+  color: inherit;
+}

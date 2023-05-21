@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% if page.title %}
+        {{ page.title | escape }}
+      {% endif %}
+    </title>
+    <!-- <link rel="shortcut icon" type="image/png" href="favicon.png" /> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  </head>
+  <body id="body">
+    <div class="pad-terminal">
+      <div class="scrollable">
+        <div id="terminal">
+          <div id="output"></div>
+          <div class="prompt">
+            <span class="green">{{ site.before_at }}</span>
+            <span>@</span>
+            <span class="cyan">{{ site.after_at }}</span>
+            <span>:</span>
+            <span class="purple">~</span>
+            <span class="red">&nbsp;$&nbsp;</span>
+            <input id="input" tabindex="1" autofocus />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="assets/js/main.js" hidden></script>
+  </body>
+</html>
